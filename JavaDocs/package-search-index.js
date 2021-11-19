@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"InventoryManager"},{"l":"InventoryManager.classes"},{"l":"InventoryManager.fxml"}]

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventoryManager.fxml.PartController">
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="641.0" prefWidth="632.0">
+            <children>
+                <Text fx:id="partTitle" layoutX="58.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part" wrappingWidth="274.13671875">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="partID" disable="true" layoutX="184.0" layoutY="120.0" prefHeight="25.0" prefWidth="170.0" promptText="Disabled - Auto Gen" />
+            <RadioButton fx:id="partInHouse" layoutX="184.0" layoutY="78.0" mnemonicParsing="false" onAction="#inHouseSelected" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="partOutsourced" layoutX="332.0" layoutY="78.0" mnemonicParsing="false" onAction="#outsourcedSelected" text="Outsourced" toggleGroup="$toggleGroup" />
+            <Text layoutX="77.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" wrappingWidth="76.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="373.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" wrappingWidth="43.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" wrappingWidth="76.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" wrappingWidth="76.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="76.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="76.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="partMinInv" layoutX="415.0" layoutY="287.0" prefHeight="25.0" prefWidth="170.0" promptText="Min inventory Allowed" />
+            <TextField fx:id="partMaxInv" layoutX="184.0" layoutY="286.0" prefHeight="25.0" prefWidth="170.0" promptText="Max Inventory Allowed" />
+            <TextField fx:id="partPrice" layoutX="184.0" layoutY="245.0" prefHeight="25.0" prefWidth="170.0" promptText="Price or Cost of Part" />
+            <TextField fx:id="partCurrentInv" layoutX="184.0" layoutY="205.0" prefHeight="25.0" prefWidth="170.0" promptText="Current Inventory Quantity" />
+            <TextField fx:id="partName" layoutX="184.0" layoutY="165.0" prefHeight="25.0" prefWidth="170.0" promptText="Part Name" />
+            <Button fx:id="partAddSave" layoutX="332.0" layoutY="370.0" mnemonicParsing="false" onAction="#partSave" text="Save" />
+            <Button fx:id="partAddCancel" layoutX="382.0" layoutY="370.0" mnemonicParsing="false" onAction="#partCancel" text="Cancel" />
+            <Text fx:id="partCreationLoacationLabel" layoutX="77.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" wrappingWidth="76.15625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="partCreationLocationID" layoutX="184.0" layoutY="329.0" prefHeight="25.0" prefWidth="170.0" promptText="Machine ID Number" />
+            </children></AnchorPane>
+    </children>
+</Pane>
